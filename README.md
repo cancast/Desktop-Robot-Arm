@@ -1,11 +1,10 @@
 <p align="center">
-  <img src="docs/assets/images/project-render-transparent.png" width="180" alt="Desktop Robot Arm 3D model">
+  <img src="docs/assets/images/project-render-transparent.png" width="90" alt="Desktop Robot Arm 3D model">
 </p>
-
-# Desktop Robot Arm
+<h1 align="center">Desktop Robot Arm</h1>
 
 <p align="center">
-  <img src="docs/assets/images/final-prototype.jpeg" width="420" alt="Desktop Robot Arm prototype">
+  <img src="docs/assets/images/final-prototype.jpeg" width="360" alt="Desktop Robot Arm prototype">
 </p>
 
 A compact, 3D-printed desktop robot arm built around an ESP32-C3 Mini and four SG90 servo motors. The arm creates its own Wi-Fi network and can be controlled from a phone or computer through a browser-based joystick—no separate app or internet connection is required.
@@ -31,7 +30,9 @@ The ESP32-C3 creates a local Wi-Fi access point and serves the control page stor
 
 The mechanical design uses a ring gear in the base and helical gears in the arm to redirect the servos' rotation while keeping the assembly compact.
 
-![Robot arm web interface](docs/assets/images/control-interface.png)
+<p align="center">
+  <img src="docs/assets/images/control-interface.png" width="340" alt="Robot arm web interface">
+</p>
 
 ## Demo
 
@@ -42,13 +43,16 @@ The mechanical design uses a ring gear in the base and helical gears in the arm 
 ```text
 .
 ├── docs/
+│   ├── desktop-robot-arm-assembly-guide.md
 │   └── assets/
 │       ├── assembly/
+│       ├── animations/
+│       │   └── desktop-robot-arm-demo.gif
 │       ├── images/
-│       ├── desktop-robot-arm-demo.gif
-│       ├── final-prototype.jpeg
-│       ├── project-render-transparent.png
-│       └── wiring-diagram.png
+│       │   ├── control-interface.png
+│       │   ├── final-prototype.jpeg
+│       │   ├── project-render-transparent.png
+│       │   └── wiring-diagram.png
 ├── firmware/
 │   ├── platformio.ini
 │   └── src/main.cpp
@@ -83,14 +87,41 @@ The mechanical design uses a ring gear in the base and helical gears in the arm 
 
 ## Wiring
 
-| Function      | Servo type          | ESP32-C3 signal pin |
-| ------------- | ------------------- | ------------------: |
-| Base rotation | Continuous rotation |              GPIO 5 |
-| Arm servo 1   | Continuous rotation |              GPIO 6 |
-| Arm servo 2   | Continuous rotation |              GPIO 7 |
-| Gripper       | 180° positional     |              GPIO 8 |
+<table align="center">
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Servo type</th>
+      <th>ESP32-C3 signal pin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Base rotation</td>
+      <td>Continuous rotation</td>
+      <td align="center">GPIO 5</td>
+    </tr>
+    <tr>
+      <td>Arm servo 1</td>
+      <td>Continuous rotation</td>
+      <td align="center">GPIO 6</td>
+    </tr>
+    <tr>
+      <td>Arm servo 2</td>
+      <td>Continuous rotation</td>
+      <td align="center">GPIO 7</td>
+    </tr>
+    <tr>
+      <td>Gripper</td>
+      <td>180° positional</td>
+      <td align="center">GPIO 8</td>
+    </tr>
+  </tbody>
+</table>
 
-![Desktop Robot Arm wiring schema](docs/assets/images/wiring-diagram.png)
+<p align="center">
+  <img src="docs/assets/images/wiring-diagram.png" width="720" alt="Desktop Robot Arm wiring schema">
+</p>
 
 The diagram shows the four servo signal connections and the shared power rails. Connect the external supply to the breadboard VCC and GND rails, power all servos from those rails, and connect the ESP32 ground to the same GND rail to provide a common reference for the PWM signals.
 
@@ -104,7 +135,7 @@ Power the servo motors from the regulated **5 V, 3 A external supply**, not from
 1. Open [`desktop-robot-arm.3mf`](mechanical/desktop-robot-arm.3mf) in Bambu Studio or another compatible slicer. Alternatively, import the individual STL files from [`mechanical/stl-files/`](mechanical/stl-files/).
 2. Review the saved printer, filament, support, and plate settings before slicing. The included project was prepared with a Bambu Lab A1 profile, a 0.4 mm nozzle, 0.20 mm layer height, PLA, and supports enabled; adjust these values for your printer and material.
 3. Print all parts and remove supports and print residue.
-4. Follow the illustrated [`desktop-robot-arm-assembly-guide.md`](desktop-robot-arm-assembly-guide.md).
+4. Follow the illustrated [`desktop-robot-arm-assembly-guide.md`](docs/desktop-robot-arm-assembly-guide.md).
 
 At a high level, assembly consists of the following stages:
 

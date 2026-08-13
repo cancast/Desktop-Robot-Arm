@@ -4,7 +4,9 @@ This guide explains how to assemble the 3D-printed Desktop Robot Arm using the s
 
 ## Completed Robot Preview
 
-![Completed Desktop Robot Arm servo movement](docs/assets/animations/desktop-robot-arm-demo.gif)
+<p align="center">
+  <img src="assets/animations/desktop-robot-arm-demo.gif" width="520" alt="Completed Desktop Robot Arm servo movement">
+</p>
 
 [▶ Watch the complete project demonstration on YouTube](https://youtube.com/shorts/cK7WrAel_FE?feature=share)
 
@@ -12,7 +14,7 @@ This guide explains how to assemble the 3D-printed Desktop Robot Arm using the s
 
 Prepare the following:
 
-- All parts printed from [`desktop-robot-arm.3mf`](mechanical/desktop-robot-arm.3mf), or from the individual STL files in [`mechanical/stl-files/`](mechanical/stl-files/)
+- All parts printed from [`desktop-robot-arm.3mf`](../mechanical/desktop-robot-arm.3mf), or from the individual STL files in [`mechanical/stl-files/`](../mechanical/stl-files/)
 - 3 × continuous-rotation SG90 servo motors
 - 1 × 180° SG90 servo motor for the gripper
 - The screws supplied with the servos
@@ -29,9 +31,9 @@ Before assembly:
 
 ## Printing the Parts
 
-The recommended starting point is [`mechanical/desktop-robot-arm.3mf`](mechanical/desktop-robot-arm.3mf). It contains all 17 mechanical parts arranged on a single build plate and retains the slicer settings used when the project was created.
+The recommended starting point is [`mechanical/desktop-robot-arm.3mf`](../mechanical/desktop-robot-arm.3mf). It contains all 17 mechanical parts arranged on a single build plate and retains the slicer settings used when the project was created.
 
-The included project uses a Bambu Lab A1 profile with a 0.4 mm nozzle, 0.20 mm layer height, PLA, a textured PEI plate, and supports enabled. Before printing, open the project in Bambu Studio or another compatible slicer and verify every setting against your own printer, build plate, and filament. Rearrange the parts or use the individual STL files in [`mechanical/stl-files/`](mechanical/stl-files/) if the complete plate does not fit your printer.
+The included project uses a Bambu Lab A1 profile with a 0.4 mm nozzle, 0.20 mm layer height, PLA, a textured PEI plate, and supports enabled. Before printing, open the project in Bambu Studio or another compatible slicer and verify every setting against your own printer, build plate, and filament. Rearrange the parts or use the individual STL files in [`mechanical/stl-files/`](../mechanical/stl-files/) if the complete plate does not fit your printer.
 
 ### Slicer Estimate for the Included Plate
 
@@ -54,7 +56,9 @@ In each illustration, the black arrows show the insertion or joining direction. 
 
 ## Step 1 — Install the First Arm Servo and Drive Gear
 
-![Install the first servo and drive gear](docs/assets/assembly/assembly-guide-step-01-install-servo-and-bevel-gear.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-01-install-servo-and-bevel-gear.png" width="680" alt="Install the first servo and drive gear">
+</p>
 
 Insert the first continuous-rotation servo into the open servo pocket of the arm module. Keep its output shaft facing the large helical gear already positioned in the arm.
 
@@ -64,7 +68,9 @@ Do not permanently tighten the gear until its axial position has been checked.
 
 ## Step 2 — Lower the Second Arm Servo into Its Housing
 
-![Lower the second servo into the arm housing](docs/assets/assembly/assembly-guide-step-02-servo-lowering.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-02-servo-lowering.png" width="680" alt="Lower the second servo into the arm housing">
+</p>
 
 Place the 180° positional servo above the rectangular opening in the other arm module. This servo will operate the gripper. Orient its output shaft toward the circular side opening, as shown, and lower the servo vertically into the pocket.
 
@@ -72,7 +78,9 @@ Make sure the cable exits through an unobstructed side of the housing and is not
 
 ## Step 3 — Install the Servo Locking Block
 
-![Install the servo locking block](docs/assets/assembly/assembly-guide-step-03-locking-block.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-03-locking-block.png" width="680" alt="Install the servo locking block">
+</p>
 
 Insert the small locking block into the shaped opening behind the second servo. Match the block's keyed profile to the recess and press it down until it sits flush.
 
@@ -80,7 +88,9 @@ The block prevents the servo from lifting or shifting inside the arm. If it requ
 
 ## Step 4 — Join the Two Arm Modules
 
-![Join the two arm modules and mesh the gears](docs/assets/assembly/assembly-guide-step-04-join-bevel-gear-modules.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-04-join-bevel-gear-modules.png" width="680" alt="Join the two arm modules and mesh the gears">
+</p>
 
 Bring the two completed arm modules together in the direction of the arrow. Guide the curved upper section over the small drive gear while aligning the joint faces and connection points.
 
@@ -88,7 +98,9 @@ As the modules meet, confirm that the small and large helical gears engage corre
 
 ## Step 5 — Fit the Large Gear Cover
 
-![Fit the protective cover over the large gear](docs/assets/assembly/assembly-guide-step-05-install-bevel-gear-cover.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-05-install-bevel-gear-cover.png" width="680" alt="Fit the protective cover over the large gear">
+</p>
 
 Position the rounded cover over the exposed large helical gear. Align its lower rails or tabs with the matching guides on the arm, then slide it into place in the direction shown.
 
@@ -96,7 +108,9 @@ The cover should enclose the gear without contacting its teeth. Check the gear a
 
 ## Step 6 — Attach the Lower Arm Brace
 
-![Attach the lower arm brace](docs/assets/assembly/assembly-guide-step-06-fit-lower-brace.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-06-fit-lower-brace.png" width="680" alt="Attach the lower arm brace">
+</p>
 
 Align the long lower brace with the circular joint openings at both ends of the arm assembly. Raise it into position beneath the arm so that both holes line up with the corresponding threaded joint openings.
 
@@ -104,7 +118,9 @@ Make sure the brace is not twisted and that both sides sit flat before inserting
 
 ## Step 7 — Secure the Arm Joints
 
-![Install the printed arm fasteners](docs/assets/assembly/assembly-guide-step-07-install-fasteners.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-07-install-fasteners.png" width="680" alt="Install the printed arm fasteners">
+</p>
 
 Install the printed fasteners through the two aligned joint openings. Match each fastener to the opening shown in the illustration and tighten only until the arm sections are held together.
 
@@ -115,7 +131,9 @@ After tightening, move the arm slowly through its available range and confirm th
 
 ## Step 8 — Attach the Arm to the Rotating Platform
 
-![Slide the arm assembly onto the circular rotating platform](docs/assets/assembly/assembly-guide-step-08-attach-circular-base.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-08-attach-circular-base.png" width="680" alt="Slide the arm assembly onto the circular rotating platform">
+</p>
 
 Align the lower rail of the arm assembly with the matching channel on the circular rotating platform. Slide the platform onto the arm in the direction shown until the end stop and retaining features line up.
 
@@ -123,7 +141,9 @@ Keep the platform level during insertion. Do not bend the rail or force the conn
 
 ## Step 9 — Lock the Arm onto the Platform
 
-![Install the curved base retaining clip](docs/assets/assembly/assembly-guide-step-09-install-base-clip.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-09-install-base-clip.png" width="680" alt="Install the curved base retaining clip">
+</p>
 
 Place the curved retaining clip into the open section of the platform's outer track. Align its end tabs with the matching slots and press or slide it into position.
 
@@ -131,7 +151,9 @@ Check that the clip sits level with the surrounding rim and prevents the arm ass
 
 ## Step 10 — Insert the Base-Rotation Servo
 
-![Insert the base servo into the rotating-base housing](docs/assets/assembly/assembly-guide-step-10-install-base-servo.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-10-install-base-servo.png" width="680" alt="Insert the base servo into the rotating-base housing">
+</p>
 
 Lower the third continuous-rotation servo into the rectangular holder inside the rotating-base housing. Orient its output shaft toward the open side and cable passage shown in the illustration.
 
@@ -139,7 +161,9 @@ Route the servo wire through the available opening before the upper platform is 
 
 ## Step 11 — Secure the Base Servo
 
-![Secure the base servo with its mounting screws](docs/assets/assembly/assembly-guide-step-11-secure-base-servo.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-11-secure-base-servo.png" width="680" alt="Secure the base servo with its mounting screws">
+</p>
 
 Use the servo mounting tabs and suitable servo screws to secure the motor to its internal holder. Start both screws before tightening either one fully, then tighten them evenly.
 
@@ -147,7 +171,9 @@ The servo body must not move in its holder, but the screws should not crush the 
 
 ## Step 12 — Install the Base Drive Gear and Upper Platform
 
-![Install the base drive gear and lower the upper platform](docs/assets/assembly/assembly-guide-step-12-install-base-drive-gear.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-12-install-base-drive-gear.png" width="680" alt="Install the base drive gear and lower the upper platform">
+</p>
 
 Fit the base drive gear onto the output shaft of the servo installed in Steps 10–11. Secure it using the appropriate servo-horn screw, if required by your servo and gear fit.
 
@@ -155,7 +181,9 @@ Carefully lower the completed arm-and-platform assembly into the rotating-base h
 
 ## Step 13 — Join the Rotating Base to the Ring-Gear Base
 
-![Join the rotating assembly to the static ring-gear base](docs/assets/assembly/assembly-guide-step-13-install-ring-gear-base.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-13-install-ring-gear-base.png" width="680" alt="Join the rotating assembly to the static ring-gear base">
+</p>
 
 Align the base drive gear with the internal ring gear in the static lower base. Lower the rotating assembly vertically over the center post while guiding the drive gear into the ring-gear teeth.
 
@@ -163,7 +191,9 @@ The rotating base should sit flat and remain centered. Turn it slowly by hand th
 
 ## Step 14 — Install the Gripper Jaws
 
-![Slide the left and right gripper jaws into place](docs/assets/assembly/assembly-guide-step-14-install-gripper-jaws.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-14-install-gripper-jaws.png" width="680" alt="Slide the left and right gripper jaws into place">
+</p>
 
 Slide the grippers into the two guides at the front of the arm. Orient both racks so their teeth face inward toward the center, as shown.
 
@@ -171,7 +201,9 @@ Insert the jaws evenly and position them at approximately equal distances from t
 
 ## Step 15 — Install the Gripper Synchronizing Gear
 
-![Install the middle gear between the gripper jaws](docs/assets/assembly/assembly-guide-step-15-install-gripper-gear.png)
+<p align="center">
+  <img src="assets/assembly/assembly-guide-step-15-install-gripper-gear.png" width="680" alt="Install the middle gear between the gripper jaws">
+</p>
 
 Place middle gear between the two jaw racks and onto the gripper-servo output shaft. Engage the gear with both racks at the same time so that rotating it moves the jaws symmetrically in opposite directions.
 
@@ -193,7 +225,7 @@ Before connecting the electronics or applying power:
 5. Place the robot on a flat, stable surface.
 6. Verify that the rotating base cannot separate from the static base when lifted gently.
 
-After the mechanical checks pass, follow the wiring, firmware installation, calibration, and operating instructions in the main [`README.md`](README.md).
+After the mechanical checks pass, follow the wiring, firmware installation, calibration, and operating instructions in the main [`README.md`](../README.md).
 
 > [!WARNING]
 > Perform the first powered test at low load with space around the robot. Be ready to disconnect the 5 V supply if a motor stalls, a gear skips, a wire is pulled, or the ESP32 repeatedly resets.
