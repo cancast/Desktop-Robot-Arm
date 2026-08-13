@@ -1,10 +1,12 @@
 <p align="center">
-  <img src="Documentation/Project%20Image%20Transparent.png" width="180" alt="Desktop Robot Arm 3D model">
+  <img src="docs/assets/images/project-render-transparent.png" width="180" alt="Desktop Robot Arm 3D model">
 </p>
 
 # Desktop Robot Arm
 
-![Desktop Robot Arm prototype](Documentation/Final%20Design%203.jpeg)
+<p align="center">
+  <img src="docs/assets/images/final-prototype.jpeg" width="420" alt="Desktop Robot Arm prototype">
+</p>
 
 A compact, 3D-printed desktop robot arm built around an ESP32-C3 Mini and four SG90 servo motors. The arm creates its own Wi-Fi network and can be controlled from a phone or computer through a browser-based joystick—no separate app or internet connection is required.
 
@@ -29,34 +31,37 @@ The ESP32-C3 creates a local Wi-Fi access point and serves the control page stor
 
 The mechanical design uses a ring gear in the base and helical gears in the arm to redirect the servos' rotation while keeping the assembly compact.
 
-![Robot arm web interface](Documentation/Aray%C3%BCz%20V2.png)
+![Robot arm web interface](docs/assets/images/control-interface.png)
 
 ## Demo
 
-![Desktop Robot Arm servo movement demo](Documentation/Desktop%20Robot%20Arm%20Demo.gif)
+[▶ Watch the Desktop Robot Arm demonstration on YouTube](https://youtube.com/shorts/cK7WrAel_FE?feature=share)
 
 ## Repository Contents
 
 ```text
 .
-├── Documentation/
-│   ├── Arayüz V2.png
-│   ├── Desktop Robot Arm Demo.gif
-│   ├── Final Design 3.jpeg
-│   └── Project Image Transparent.png
-├── Firmware/
+├── docs/
+│   └── assets/
+│       ├── assembly/
+│       ├── images/
+│       ├── desktop-robot-arm-demo.gif
+│       ├── final-prototype.jpeg
+│       ├── project-render-transparent.png
+│       └── wiring-diagram.png
+├── firmware/
 │   ├── platformio.ini
 │   └── src/main.cpp
-└── Mechanical/
-    ├── Desktop-Robot-Arm.3mf
-    └── STL Files/
+└── mechanical/
+    ├── desktop-robot-arm.3mf
+    └── stl-files/
         └── *.stl
 ```
 
-- `Mechanical/Desktop-Robot-Arm.3mf` contains all 17 printable parts arranged on one build plate together with the saved slicer profile.
-- The individual STL files in [`Mechanical/STL Files/`](Mechanical/STL%20Files/) can be imported separately when a different plate arrangement or slicer is preferred.
-- `Firmware/` is a PlatformIO project targeting the ESP32-C3 DevKitM-1 environment with the Arduino framework.
-- `Documentation/` contains photos of the finished prototype and its control interface.
+- `mechanical/desktop-robot-arm.3mf` contains all 17 printable parts arranged on one build plate together with the saved slicer profile.
+- The individual STL files in [`mechanical/stl-files/`](mechanical/stl-files/) can be imported separately when a different plate arrangement or slicer is preferred.
+- `firmware/` is a PlatformIO project targeting the ESP32-C3 DevKitM-1 environment with the Arduino framework.
+- `docs/assets/` contains the documentation images, assembly illustrations, and animation.
 
 ## Bill of Materials
 
@@ -72,7 +77,7 @@ The mechanical design uses a ring gear in the base and helical gears in the arm 
 
 ### Mechanical
 
-- [`Desktop-Robot-Arm.3mf`](Mechanical/Desktop-Robot-Arm.3mf), or all individual STL files in [`Mechanical/STL Files/`](Mechanical/STL%20Files/)
+- [`desktop-robot-arm.3mf`](mechanical/desktop-robot-arm.3mf), or all individual STL files in [`mechanical/stl-files/`](mechanical/stl-files/)
 - Suitable screws and fasteners for the servos
 - 3D printer and filament
 
@@ -85,7 +90,7 @@ The mechanical design uses a ring gear in the base and helical gears in the arm 
 | Arm servo 2   | Continuous rotation |              GPIO 7 |
 | Gripper       | 180° positional     |              GPIO 8 |
 
-![Desktop Robot Arm wiring schema](Documentation/Wiring%20Schema.png)
+![Desktop Robot Arm wiring schema](docs/assets/images/wiring-diagram.png)
 
 The diagram shows the four servo signal connections and the shared power rails. Connect the external supply to the breadboard VCC and GND rails, power all servos from those rails, and connect the ESP32 ground to the same GND rail to provide a common reference for the PWM signals.
 
@@ -96,10 +101,10 @@ Power the servo motors from the regulated **5 V, 3 A external supply**, not from
 
 ## Mechanical Assembly
 
-1. Open [`Desktop-Robot-Arm.3mf`](Mechanical/Desktop-Robot-Arm.3mf) in Bambu Studio or another compatible slicer. Alternatively, import the individual STL files from [`Mechanical/STL Files/`](Mechanical/STL%20Files/).
+1. Open [`desktop-robot-arm.3mf`](mechanical/desktop-robot-arm.3mf) in Bambu Studio or another compatible slicer. Alternatively, import the individual STL files from [`mechanical/stl-files/`](mechanical/stl-files/).
 2. Review the saved printer, filament, support, and plate settings before slicing. The included project was prepared with a Bambu Lab A1 profile, a 0.4 mm nozzle, 0.20 mm layer height, PLA, and supports enabled; adjust these values for your printer and material.
 3. Print all parts and remove supports and print residue.
-4. Follow the illustrated [`Desktop Robot Arm Assembly Guide.md`](Desktop%20Robot%20Arm%20Assembly%20Guide.md).
+4. Follow the illustrated [`desktop-robot-arm-assembly-guide.md`](desktop-robot-arm-assembly-guide.md).
 
 At a high level, assembly consists of the following stages:
 
@@ -118,11 +123,11 @@ At a high level, assembly consists of the following stages:
 - A data-capable USB cable
 - An ESP32-C3 Mini compatible with PlatformIO's `esp32-c3-devkitm-1` board definition
 
-The required Arduino Servo library is declared in `Firmware/platformio.ini` and will be installed automatically by PlatformIO.
+The required Arduino Servo library is declared in `firmware/platformio.ini` and will be installed automatically by PlatformIO.
 
 ### Upload with PlatformIO IDE
 
-1. Open the [`Firmware`](Firmware/) folder in Visual Studio Code.
+1. Open the [`firmware`](firmware/) folder in Visual Studio Code.
 2. Connect the ESP32-C3 Mini over USB.
 3. Select the **esp32-c3-devkitm-1** PlatformIO environment.
 4. Run **Upload**. PlatformIO should detect the connected serial port automatically.
@@ -133,7 +138,7 @@ The required Arduino Servo library is declared in `Firmware/platformio.ini` and 
 From the repository root:
 
 ```bash
-cd Firmware
+cd firmware
 pio run --target upload
 pio device monitor --baud 115200
 ```
@@ -152,7 +157,7 @@ If PlatformIO cannot detect the board automatically, list the available serial p
 6. Release the joystick to stop the three continuous-rotation servos.
 7. Use the **Gripper** button to open or close the gripper.
 
-The Wi-Fi name and password can be changed near the top of [`Firmware/src/main.cpp`](Firmware/src/main.cpp).
+The Wi-Fi name and password can be changed near the top of [`firmware/src/main.cpp`](firmware/src/main.cpp).
 
 ## Calibration and Troubleshooting
 
@@ -187,4 +192,6 @@ Servo orientation can reverse the expected motion. Check the physical installati
 
 ## License
 
-This entire repository—including the firmware, mechanical design files, documentation, and images—is released under the [MIT License](LICENSE).
+The original firmware, mechanical design files, documentation, and images created for this project are released under the [MIT License](LICENSE).
+
+The included 3MF file may embed slicer-generated printer profiles, start/end G-code, presets, trademarks, and other metadata supplied by Bambu Lab or other third-party tools. Those embedded third-party materials are not relicensed under MIT and remain subject to the terms and rights of their respective owners. Third-party libraries installed by PlatformIO are likewise governed by their own licenses.
