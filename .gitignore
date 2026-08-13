@@ -1,0 +1,31 @@
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# PlatformIO build output and generated dependencies
+.pio/
+**/.pio/
+.pioenvs/
+.piolibdeps/
+
+# Visual Studio Code generated/local state in any project subdirectory
+**/.vscode/*
+!**/.vscode/extensions.json
+!**/.vscode/settings.json
+
+# Other editors and operating systems
+.idea/
+*.swp
+*.swo
+*~
+Thumbs.db
+Desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# PlatformIO test and coverage output
+.coverage
+coverage/
